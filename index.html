@@ -6,14 +6,8 @@
 	<body>
 		<script>
 			function computerPlay() {
-				switch(random(3)) {
-					case 1:
-						return "rock";
-					case 2:
-						return "paper";
-					case 3:
-						return "scissors";
-				}
+				let options = ["rock", "paper", "scissors"];
+				return options[Math.floor(Math.random() * 3)];
 			}
 			function play(playerSelection, computerSelection) {
 				playerSelection = playerSelection.toLowerCase();
@@ -41,11 +35,6 @@
 					}
 				}
 			}
-			//return random number from 1 to n
-			function random(n) {
-				return Math.floor(Math.random() * n) + 1;
-			}
-			//capitalize first letter of a string
 		</script>
 	</body>
 </html>
