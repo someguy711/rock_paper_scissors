@@ -46,11 +46,12 @@
 					console.log(result);
 					if (result.includes("win")) {
 						winCount++;
-					} else if (result.includes("tie")) {
+					} else if (result.includes("Tie")) {
 						tieCount++;
 					}
 				}
-				console.log("Results: " + winCount + " wins, " + (5 - winCount) 	+ " losses, and " + tieCount + " ties.");
+				lossCount = 5 - winCount - tieCount;
+				console.log("Results: " + winCount + " wins, " + (lossCount) + " losses, and " + tieCount + " ties.");
 			}
 		</script>
 	</body>
