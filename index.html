@@ -35,6 +35,23 @@
 					}
 				}
 			}
+			function game() {
+				console.log("Game started. 5 rounds of rock paper scissors.");
+				let winCount = 0;
+				let tieCount = 0;
+				for (let i = 1; i < 6; i++) {
+					let playerSelection = prompt("Round " + i + ": what would you like to play?\nRock, paper, or scissors?");
+					console.log("Round " + i + ":");
+					let result = play(playerSelection, computerPlay());
+					console.log(result);
+					if (result.includes("win")) {
+						winCount++;
+					} else if (result.includes("tie")) {
+						tieCount++;
+					}
+				}
+				console.log("Results: " + winCount + " wins, " + (5 - winCount) 	+ " losses, and " + tieCount + " ties.");
+			}
 		</script>
 	</body>
 </html>
