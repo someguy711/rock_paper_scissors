@@ -1,2 +1,1 @@
-Five round human vs browser rock paper scissors. Played in browser javascript console.
-Created to practice javascript. Exercise from The Odin Project: https://www.theodinproject.com/courses/web-development-101/lessons/rock-paper-scissors
+Human vs browser rock paper scissors. Created to practice javascript. Exercise from The Odin Project: https://www.theodinproject.com/courses/web-development-101/lessons/rock-paper-scissors
