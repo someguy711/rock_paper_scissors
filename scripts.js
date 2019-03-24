@@ -63,10 +63,8 @@ function playGame(e) {
   
   if (gameOver()) {
     if (wins.textContent === "5") {
-      alert("You win!");
       results.textContent = "You won!";
     } else {
-      alert("You lose!");
       results.textContent = "You lost!";
     }
 

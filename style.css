@@ -1,3 +1,7 @@
+html {
+  background-color: rgba(179, 58, 162, 0.788);
+}
+
 div {
   width: max-content;
   margin: 0 auto;
