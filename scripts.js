@@ -65,11 +65,9 @@ function playGame(e) {
     if (wins.textContent === "5") {
       alert("You win!");
       results.textContent = "You won!";
-      results.classList.toggle("win");
     } else {
       alert("You lose!");
       results.textContent = "You lost!";
-      results.classList.toggle("lost");
     }
 
     waitForRestart();
@@ -82,7 +80,7 @@ function waitForRestart() {
   });
   
   let restart = document.createElement("button");
-  restart.textContent = "Restart";
+  restart.textContent = "Play again";
   buttonContainer.appendChild(restart);
 
   restart.addEventListener('click', () => {
