@@ -1,58 +1,25 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Rock Paper Scissors</title>
-	</head>
-	<body>
-		<script>
-			function computerPlay() {
-				let options = ["rock", "paper", "scissors"];
-				return options[Math.floor(Math.random() * 3)];
-			}
-			function play(playerSelection, computerSelection) {
-				playerSelection = playerSelection.toLowerCase();
-				if (playerSelection === computerSelection) {
-					return "Tie! You both chose " + playerSelection;
-				}
-				let win = false;
-				if (playerSelection === "rock") {
-					if (computerSelection === "paper") {
-						return "You lose! Paper beats rock";
-					} else {
-						return "You win! Rock beats scissors";
-					}
-				} else if (playerSelection === "paper") {
-					if (computerSelection === "scissors") {
-						return "You lose! Scissors beats paper";
-					} else {
-						return "You win! Paper beats rock";
-					}
-				} else {
-					if (computerSelection === "rock") {
-						return "You lose! Rock beats scissors";
-					} else {
-						return "You win! Scissors beats paper";
-					}
-				}
-			}
-			function game() {
-				console.log("Game started. 5 rounds of rock paper scissors.");
-				let winCount = 0;
-				let tieCount = 0;
-				for (let i = 1; i < 6; i++) {
-					let playerSelection = prompt("Round " + i + ": what would you like to play?\nRock, paper, or scissors?");
-					console.log("Round " + i + ":");
-					let result = play(playerSelection, computerPlay());
-					console.log(result);
-					if (result.includes("win")) {
-						winCount++;
-					} else if (result.includes("Tie")) {
-						tieCount++;
-					}
-				}
-				lossCount = 5 - winCount - tieCount;
-				console.log("Results: " + winCount + " wins, " + (lossCount) + " losses, and " + tieCount + " ties.");
-			}
-		</script>
-	</body>
+
+<head>
+  <title>Rock Paper Scissors</title>
+</head>
+
+<body>
+  <div class="buttons">
+    <button id="rock">Rock</button>
+    <button id="paper">Paper</button>
+    <button id="scissors">Scissors</button>
+  </div>
+  <div class="scoreboard">
+    <p>Wins: <span id="wins">0</span>
+      Losses: <span id="losses">0</span>
+    </p>
+  </div>
+  <div class="results">
+    <p></p>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+
 </html>
